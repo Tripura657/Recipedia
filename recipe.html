@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Recipedia Detail</title>
+  
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+      <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+
+</head>
+<body>
+   <nav >
+     <h1 style="  font-size: 40px; font-family: Lucida Handwriting, cursive; background-color: #4CAF50;margin: 0px; padding: 20px;">Recipedia</h1>
+     <br>
+    <button><a class="anchor"   href="home.html">Home</a></button>
+    <button><a class="anchor" href="index.html">Login</a></button>
+    <button><a class="anchor" href="favorites.html">Favorites</a></button>
+    <button><a class="anchor" href="dashboard.html">search</a></button>
+  </nav>
+  <div class="falling-veggies">
+    <img src="images/carrot.png" class="veggie" style="width: 80px; height: 80px;" />
+    <img src="images/tomato.png" class="veggie" style="width: 80px; height: 80px; "/>
+    <img src="images/broccoli.png" class="veggie" style="width: 80px; height: 80px;"/>
+      <img src="images/cucumber.png" class="veggie" style="width: 80px; height: 80px;"/>
+    <img src="images/chilli.png" class="veggie" style="width: 80px; height: 80px;"/>
+
+    <img src="images/pumpkin.png" class="veggie" style="width: 80px; height: 80px;"/>
+
+    <!-- Add more as needed -->
+  </div>
+  <div id="recipeContainer"> 
+</div>
+  <a href="results.html">← Back to Results</a>
+  <button onclick="downloadPDF()" style="margin-top: 20px; padding: 10px 20px; font-size: 16px;">
+  📄 Download Recipe as PDF
+</button>
+<!-- Just below download button -->
+
+<button onclick="shareRecipeAsPDF()"style="margin-top: 10px; padding: 10px 20px; font-size: 16px;">📤 Share Recipe as PDF</button>
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>

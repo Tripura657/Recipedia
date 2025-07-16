@@ -1,0 +1,40 @@
+[
+  {
+    "id": 1,
+    "name": "Tomato Pasta",
+    "ingredients": [
+      "pasta",
+      "tomato",
+      "onion",
+      "garlic",
+      "olive oil",
+      "salt",
+      "red chilli flakes",
+      "oregano",
+      "basil",
+      "tomato ketchup",
+      "cheese"
+    ],
+    "process": "Boil water in a pot, add salt and pasta, and cook until soft (8–10 mins). Drain and set aside. In a pan, heat olive oil and sauté chopped garlic and onion until golden. Add chopped tomatoes and cook until mushy. Add salt, red chilli flakes, oregano, basil, and ketchup. Mix well. Add boiled pasta to the sauce, mix everything, and cook for 2–3 minutes. Serve hot with grated cheese on top.",
+    "image": "tomato_pasta.jpeg"
+  },
+  {
+    "id": 2,
+    "name": "Veg Sandwich",
+    "ingredients": [
+      "bread",
+      "cucumber",
+      "tomato",
+      "onion",
+      "boiled potato",
+      "butter",
+      "salt",
+      "pepper",
+      "cheese slice",
+      "green chutney",
+      "tomato ketchup"
+    ],
+    "process": "Peel and slice cucumber, tomato, onion, and boiled potato. Spread butter or green chutney on bread slices. Layer the sliced veggies and cheese on one slice. Sprinkle salt and pepper. Cover with another slice of bread. Optionally toast on a pan or sandwich maker. Cut in half and serve with tomato ketchup.",
+    "image": "veg_sandwich.jpeg"
+  }
+]

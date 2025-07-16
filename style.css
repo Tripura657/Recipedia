@@ -1,0 +1,298 @@
+/* Font & Layout Enhancements */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+ margin: 0;
+ padding: 0;
+  background: linear-gradient(to right, #a8e063, #56ab2f); /* green shades */
+  color: #2f4f2f;
+  background-image: url('images/image1-removebg-preview.png'); /* your veggie wreath image */
+  background-repeat: repeat;
+  background-size: 100px;
+  animation: float 20s linear infinite;
+}
+.falling-veggies {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.veggie {
+  position: absolute;
+  width: 50px;
+  animation: fall 10s linear infinite;
+  opacity: 0.8;
+}
+
+/* Random positions */
+.veggie:nth-child(1) { left: 10%; animation-delay: 0s; }
+.veggie:nth-child(2) { left: 30%; animation-delay: 2s; }
+.veggie:nth-child(3) { left: 60%; animation-delay: 4s; }
+.veggie:nth-child(4) { left: 80%; animation-delay: 6s; }
+.veggie:nth-child(5) { left: 70%; animation-delay: 8s; }
+.veggie:nth-child(6) { left: 70%; animation-delay: 2s; }
+
+/* Add more if needed */
+
+@keyframes fall {
+  0% {
+    top: -100px;
+    transform: rotate(0deg);
+  }
+  100% {
+    top: 100vh;
+    transform: rotate(360deg);
+  }
+}
+.features-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px;
+}
+
+.feature-card {
+  background-color: rgba(255, 255, 255, 0.6); /* semi-transparent */
+  backdrop-filter: blur(4px); /* frosted glass effect */
+  border-radius: 15px;
+  padding: 25px;
+  width: 300px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+}
+
+.feature-card h3 {
+  font-size: 20px;
+  color: #2f4f2f;
+  margin-bottom: 15px;
+}
+
+.feature-card p {
+  font-size: 15px;
+  color: #333;
+}
+.transparent-box {
+  background-color: rgba(255, 87, 34, 0.5); /* Orange with 50% transparency */
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  width: 80%;
+  margin: auto;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px); /* Optional: frosted glass effect */
+  text-align: center;
+}
+
+.anchor{
+   text-decoration: none;
+  color:  #0f5b11;
+  margin-top: 50px;
+  font-size: 30px;
+}
+
+nav{
+  color: aliceblue;
+  background-color:  #5dcf61;
+  height: 180px;
+  
+}
+
+/* Floating background effect */
+@keyframes float {
+  0% { background-position: 0 0; }
+  100% { background-position: 100px 100px; }
+}
+
+/* Form Styling */
+form {
+  display: inline-block;
+  margin: 20px auto;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Input Boxes */
+input {
+  padding: 10px;
+  margin: 5px;
+  width: 250px;
+  border: 2px solid #4CAF50;
+  border-radius: 5px;
+}
+
+/* Buttons */
+button {
+  padding: 10px 20px;
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e64a19;
+}
+
+/* Recipe Box */
+.recipe-box {
+  border: 1px solid #ff5722;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: #33ba47;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Vegetable Image Style */
+img {
+  width: 300px;
+  margin: 10px;
+  transition: transform 0.6s ease;
+  border-radius: 10px;
+}
+
+img:hover {
+  transform: rotate(15deg) scale(1.05);
+}
+
+/* Chopping effect on recipe box hover */
+@keyframes chop {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(-5deg); }
+  75% { transform: rotate(3deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.recipe-box:hover {
+  animation: chop 0.4s ease;
+}
+
+/* Optional: Rotating center veggie wreath (if you want it) */
+.rotating-wreath {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 500px;
+  margin-left: -150px;
+  margin-top: -150px;
+  z-index: -1;
+  align-items: center;
+  animation: rotateWreath 30s linear infinite;
+}
+
+@keyframes rotateWreath {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+/*
+.loginbox{
+  background-image: url();
+  margin-top: 50px;
+  height: 350px;
+  width: 350px;
+  top: 50%;
+  left: 50%;  
+  transform: translate(200%, -0%);
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}*/
+/*.wreath-container {
+  position: relative;
+  
+}*/
+
+.rotating-wreath {
+  width: 80vw;
+  height: 80vw;
+  max-width: 500px;
+  max-height: 500px;
+}
+
+
+
+.rotating-wreath img {
+  width: 100%;
+  height: 100%;
+}
+
+.login-wrapper {
+  
+  width: 400px;
+  height: 350px;
+  margin: 50px auto;
+  transform: translateX(100px);
+  
+  border-radius: 15px;
+   
+    background-color: rgba(255, 255, 255, 0.85);
+   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/*.login-wrapper {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  margin: 50px auto;
+  
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+*/
+/*.wreath-wrapper {
+  position: relative;
+  width: 400px; 
+  height: 400px;
+  margin: 0 auto;
+}
+
+.rotating-wreath {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: rotate 20s linear infinite;
+  z-index: 1;
+}
+
+.login-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.8);
+  opacity: 0.8;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+*/

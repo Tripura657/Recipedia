@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Recipedia Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+      <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+
+</head>
+<body>
+   <nav >
+     <h1 style="  font-size: 40px; font-family: Lucida Handwriting, cursive; background-color: #4CAF50;margin: 0px; padding: 20px;">Recipedia</h1>
+     <br>
+    <button><a class="anchor"   href="home.html">Home</a></button>
+    <button><a class="anchor" href="index.html">Login</a></button>
+    <button><a class="anchor" href="favorites.html">Favorites</a></button>
+    <button><a class="anchor" href="dashboard.html">search</a></button>
+  </nav>
+  <div class="falling-veggies">
+    <img src="images/carrot.png" class="veggie" style="width: 80px; height: 80px;" />
+    <img src="images/tomato.png" class="veggie" style="width: 80px; height: 80px; "/>
+    <img src="images/broccoli.png" class="veggie" style="width: 80px; height: 80px;"/>
+      <img src="images/cucumber.png" class="veggie" style="width: 80px; height: 80px;"/>
+    <img src="images/chilli.png" class="veggie" style="width: 80px; height: 80px;"/>
+
+    <img src="images/pumpkin.png" class="veggie" style="width: 80px; height: 80px;"/>
+
+    <!-- Add more as needed -->
+  </div>
+  <h2>Welcome to Recipe Finder</h2>
+  <form id="searchForm">
+    <input type="text" id="ingredientInput" placeholder="Enter ingredients (comma separated)">
+    <br>
+    <input type="text" id="nameInput" placeholder="Enter recipe name (optional)"><br>
+    <button type="submit">Search</button><br>
+  </form>
+  <br>
+ <button><a href="favorites.html">❤️ View Favorites</a></button> 
+  <script src="script.js"></script>
+</body>
+</html>
