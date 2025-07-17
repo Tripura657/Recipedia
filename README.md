@@ -53,13 +53,6 @@ It is especially helpful for beginners, students, or anyone looking for meal ide
 
 ---
 
-
-## 🔗 Live Demo
-
-🌐 [Recipedia Live](https://glistening-beignet-497868.netlify.app/)
-
----
-
 ## 🙋‍♀️ Author
 
 **Tripura Tejasri Gajula**  
