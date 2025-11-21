@@ -4,17 +4,108 @@
   <title>Recipedia Dashboard</title>
   <link rel="stylesheet" href="style.css">
       <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+<style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
 
+        /* HEADER WITH BACKGROUND IMAGE */
+        .header {
+            position: relative;
+            height: 300px;
+            width: 100%;
+            background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* FROSTED GLASS GREEN OVERLAY */
+        .glass {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 200, 80, 0.35);  /* transparent green */
+            backdrop-filter: blur(10px);         /* frosted-glass effect */
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        /* CONTENT INSIDE HEADER */
+        .header-content {
+            position: relative; /* important to show above the glass */
+            z-index: 2;
+            text-align: center;
+            color: white;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .nav-btn {
+            padding: 12px 25px;
+            background: #ff622b;
+            color: white;
+            font-size: 22px;
+            border-radius: 20px;
+            cursor: pointer;
+            border: none;
+            transition: 0.3s;
+        }
+
+        .nav-btn:hover {
+            background: #ff3a00;
+        }
+
+        /* RECIPEDIA LOGO BOX */
+        .logo-box {
+            background: #006e31;
+            padding: 20px 60px;
+            border-radius: 12px;
+        }
+
+        .logo-text {
+            font-size: 50px;
+            color: white;
+            font-family: "Brush Script MT", cursive;
+        }
+    </style>
 </head>
 <body>
-   <nav >
-     <h1 style="  font-size: 40px; font-family: Lucida Handwriting, cursive; background-color: #4CAF50;margin: 0px; padding: 20px;">Recipedia</h1>
-     <br>
-    <button><a class="anchor"   href="home.html">Home</a></button>
-    <button><a class="anchor" href="index.html">Login</a></button>
+  <header class="header">
+  <div class="glass"></div>
+  <div class="header-content">
+<div class="navbar">       <button><a class="anchor"   href="home.html">Home</a></button>
+    <button id="loginBtn"><a class="anchor" href="index.html" >Login</a></button>
     <button><a class="anchor" href="favorites.html">Favorites</a></button>
-    <button><a class="anchor" href="dashboard.html">search</a></button>
+    <button><a class="anchor" href="dashboard.html">Search</a></button>
+    <button><a class="anchor" href="notes.html">Notes</a></button>
+
+    <div id="authButtons">
+  
+  
+  <span id="userDisplay" style="display:none;"></span>
+  <button id="logoutBtn" style="display:none;" onclick="logout()">Logout</button>
+</div>
+
+     </div>
+     
+     <div class="logo-box">
+                <div class="logo-text">Recipedia</div>
+            </div>
+      <br>
+     <p style="font-size: 1.2rem; color: white; font-family: Lucida Handwriting, cursive;">From your kitchen shelf to your dinner table — find the perfect recipe with what you have.</p>
+   
   </nav>
+  </div>
+  </header>
   <div class="falling-veggies">
     <img src="images/carrot.png" class="veggie" style="width: 80px; height: 80px;" />
     <img src="images/tomato.png" class="veggie" style="width: 80px; height: 80px; "/>

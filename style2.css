@@ -1,0 +1,180 @@
+/* ------------------ GLOBAL BODY ------------------ */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+
+  background: linear-gradient(to right, #a8e063, #56ab2f);
+  color: #2f4f2f;
+
+  background-image: url('images/image1-removebg-preview.png');
+  background-repeat: repeat;
+  background-size: 100px;
+  animation: float 20s linear infinite;
+}
+
+@keyframes float {
+  0% { background-position: 0 0; }
+  100% { background-position: 100px 100px; }
+}
+
+/* ------------------ GLASSY HEADER ------------------ */
+.main-banner {
+  height: 280px;
+  padding: 20px 0;
+
+  /* Background image inside header */
+  background-image: url("images/header-bg.jpg");   /* ← Replace with your image */
+  background-size: cover;
+  background-position: center;
+
+  /* Green glass overlay */
+  background-color: rgba(93, 207, 97, 0.45);
+
+  /* Frosted-glass effect */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  text-align: center;
+
+  border-bottom: 2px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* ------------------ NAV BUTTONS ------------------ */
+.main-banner button {
+  padding: 8px 20px;
+  background: rgba(255, 90, 0, 0.8);
+  border: none;
+  border-radius: 20px;
+  margin: 10px 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.main-banner button:hover {
+  transform: scale(1.08);
+  background: rgba(255, 90, 0, 1);
+}
+
+.anchor {
+  text-decoration: none;
+  color: #0f5b11;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+/* ------------------ HEADER TAGLINE ------------------ */
+.main-banner p {
+  font-size: 1.2rem;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 5px;
+
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  backdrop-filter: blur(3px);
+
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.45);
+}
+
+/* ------------------ FALLING VEGGIES ------------------ */
+.falling-veggies {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.veggie {
+  position: absolute;
+  width: 50px;
+  animation: fall 10s linear infinite;
+  opacity: 0.8;
+}
+
+.veggie:nth-child(1) { left: 10%; animation-delay: 0s; }
+.veggie:nth-child(2) { left: 30%; animation-delay: 2s; }
+.veggie:nth-child(3) { left: 60%; animation-delay: 4s; }
+.veggie:nth-child(4) { left: 80%; animation-delay: 6s; }
+.veggie:nth-child(5) { left: 70%; animation-delay: 8s; }
+.veggie:nth-child(6) { left: 50%; animation-delay: 3s; }
+
+@keyframes fall {
+  0% { top: -100px; transform: rotate(0deg); }
+  100% { top: 100vh; transform: rotate(360deg); }
+}
+
+/* ------------------ TRANSPARENT INFO BOX ------------------ */
+.transparent-box {
+  background-color: rgba(255, 87, 34, 0.5);
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  width: 80%;
+  margin: auto;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+  text-align: center;
+}
+
+/* ------------------ FEATURES SECTION ------------------ */
+.features-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px;
+}
+
+.feature-card {
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(4px);
+  border-radius: 15px;
+  padding: 25px;
+  width: 300px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+}
+
+.feature-card h3 {
+  font-size: 20px;
+  color: #2f4f2f;
+  margin-bottom: 15px;
+}
+
+.feature-card p {
+  font-size: 15px;
+  color: #333;
+}
+
+/* ------------------ BUTTONS ------------------ */
+button:hover {
+  background-color: #e64a19;
+}
+
+/* ------------------ IMAGE HOVER ------------------ */
+img {
+  transition: transform 0.6s ease;
+  border-radius: 10px;
+}
+
+img:hover {
+  transform: rotate(15deg) scale(1.05);
+}
