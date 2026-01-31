@@ -16,11 +16,20 @@ app.use(express.json());
 //app.use(cors({
  // origin: process.env.FRONTEND_ORIGIN || '*' // set FRONTEND_ORIGIN in prod
 //}));
+// app.use(cors({
+//   origin: ["http://127.0.0.1:5500", "http://localhost:5500"],
+//   methods: "GET,POST,DELETE,PUT,PATCH",
+//   allowedHeaders: "Content-Type,Authorization"
+// }));
 app.use(cors({
-  origin: ["http://127.0.0.1:5500", "http://localhost:5500"],
-  methods: "GET,POST,DELETE,PUT,PATCH",
-  allowedHeaders: "Content-Type,Authorization"
+  origin: process.env.FRONTEND_ORIGIN,
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"]
 }));
+
+// ✅ REQUIRED for browser preflight
+app.options("*", cors());
 
 // connect to MongoDB
 const MONGO = process.env.MONGO_URI;
