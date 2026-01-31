@@ -29,7 +29,7 @@ app.use(cors({
 }));
 
 // ✅ REQUIRED for browser preflight
-app.options("*", cors());
+// app.options("*", cors());
 
 // connect to MongoDB
 const MONGO = process.env.MONGO_URI;
