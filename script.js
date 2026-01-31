@@ -1,6 +1,7 @@
 // script.js - updated to use backend API for auth & favourites
 
-const API_BASE = 'http://localhost:5000'; // change to your deployed backend URL in production
+//const API_BASE = 'http://localhost:5000'; // change to your deployed backend URL in production
+const API_BASE = 'https://recipedia-sfkt.onrender.com';
 
 /* ---------------- SIGNUP ---------------- */
 if (document.getElementById('signupForm')) {
